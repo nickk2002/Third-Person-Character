@@ -1,0 +1,39 @@
+Deci ce se intampla aici
+Avem asa :
+3 blendtree uri pt walk, run, sprint
+
+si unul mare care interpoleaza intre blendtree urile mari
+toate animatiile sunt de pe mixamo si iti dai seama ca a fost greu sa le gasesc pe toate asa
+animatiile au toate loop time si loop pose (adica sunt in place ele nu se misca, le misca codul)
+
+NU FOLOSIM ROOT MOTION(am incercat e ok dar intra in conflict cu rotirea player-ului din mouse)
+
+Movement.cs:
+are walkSpeed si RunSpeed
+// daca apesi shift intrii in run
+Player Animations.cs
+
+pune parametrii in inspector :
+Speed, HOrizontal,Vertical
+Speed = viteza care o are, aceasta viteza creste incet incet pana cand ajunge la o limita
+cand esti in walk normal poti sa o cresti maxim pana la Walk Max Treshold (0.6) in timpul de cate secunde doresti
+Time to Run
+
+Cand apesi shift o sa intrii usor usor in blend tree ul de sprint, are limita 1 si Time sprint 2
+ca sa vezi exact de ce sunt valorile asa uita-te pe primul blend tree care este 1 d)
+
+cam atat este
+te poti misca si cu mouse-ul
+
+Camera Follow.cs
+
+distance away -> distanta in spate
+distance up -> distanta sus
+camera se uita mereu la player.
+camera are un smooth pt follow, folosesc lerp
+
+in Animations mai am si alte animatii de la alte caractere din alte asseturi
+
+Sper sa iti placa :)
+
+
